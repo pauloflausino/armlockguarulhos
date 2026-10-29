@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="./">
+<title>Barbearia ArmLock — Agende seu corte online | Guarulhos</title>
+<meta name="description" content="Dê um ArmLock no seu visual. Barbearia em Vila Nova Bonsucesso, Guarulhos. Agende fade, corte social, kids, barba e combos pela internet: escolha o serviço, a data e o horário.">
+<meta name="keywords" content="barbearia, barbearia Guarulhos, Vila Nova Bonsucesso, agendar corte, fade, degradê, corte social, barba, Barbearia ArmLock">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="Guarulhos">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0E0E10">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Barbearia ArmLock">
+<meta property="og:title" content="Barbearia ArmLock — Agende seu corte online">
+<meta property="og:description" content="Dê um ArmLock no seu visual. Corte, barba e combos com hora marcada em Guarulhos.">
+<meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+<meta property="og:image" content="https://SEU-DOMINIO.com.br/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://SEU-DOMINIO.com.br/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E0E10; --card:#18181B; --card2:#202024; --amber:#D4A63A; --amber-deep:#B58A24;
+  --red:#C8262C; --red-deep:#9E1D22; --ink:#F3EFE6; --ink-soft:#A9A597; --line:#34343A;
+  --green:#25D366; --shadow:0 10px 30px rgba(0,0,0,.45); --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(1100px 520px at 50% -10%,#1E1C12,transparent 72%);
+  -webkit-font-smoothing:antialiased;padding-bottom:96px}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select{font-family:inherit}
+h1,h2,h3,.disp{font-family:'Oswald',Impact,sans-serif;letter-spacing:.3px}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:#09090A}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,10,.55),rgba(9,9,10,.94))}
+.hero-in{position:relative;max-width:960px;margin:0 auto;padding:20px 16px 22px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .logo{width:62px;height:62px;border-radius:50%;border:2px solid rgba(212,166,58,.5);box-shadow:var(--shadow)}
+.brand h1{font-size:38px;line-height:.92;font-weight:700;text-transform:uppercase}
+.brand h1 b{color:var(--amber);font-weight:700}
+.brand .tg{font-size:12.5px;color:var(--amber);font-weight:600;margin-top:4px;font-family:'Inter';letter-spacing:.6px;text-transform:uppercase}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(212,166,58,.22);
+  padding:6px 11px;border-radius:999px;font-size:12.5px;font-weight:500}
+.chip.status-open{background:rgba(37,120,60,.22);border-color:rgba(120,220,140,.4)}
+.chip.status-closed{background:rgba(0,0,0,.35)}
+.chip a{color:#fff;text-decoration:none}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.on{background:#67e08a;box-shadow:0 0 0 0 rgba(103,224,138,.6);animation:pulse 1.8s infinite}
+.dot.off{background:var(--amber)}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(103,224,138,0)}100%{box-shadow:0 0 0 0 rgba(103,224,138,0)}}
+.repeat{margin-top:14px;display:none;width:100%;background:var(--amber);color:#1A1405;font-weight:700;
+  padding:12px;border-radius:12px;font-size:14px;box-shadow:var(--shadow)}
+.repeat b{color:#2A1F08}
+
+.closed-banner{background:var(--amber);color:#1A1405;font-size:13px;font-weight:600;text-align:center;padding:9px 14px;display:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:30;background:rgba(14,14,16,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:960px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:11px 14px;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--ink-soft);padding:7px 14px;border-radius:999px;
+  background:var(--card);border:1px solid var(--line);transition:.15s;text-decoration:none}
+.nav a.active{background:var(--amber);color:#1A1405;border-color:var(--amber)}
+
+main{max-width:960px;margin:0 auto;padding:6px 14px 40px}
+.sec{padding-top:22px;scroll-margin-top:62px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:6px 2px 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.sec-h h2{font-size:26px;color:var(--amber);text-transform:uppercase}
+.sec-h .sub{font-size:12.5px;color:var(--ink-soft);font-style:italic}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+
+.card{display:flex;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
+.card .thumb{width:104px;height:104px;flex:none;border-radius:12px;object-fit:cover;background:var(--card2);border:1px solid var(--line)}
+.card .txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.card h3{font-family:'Oswald';font-size:19px;font-weight:600;line-height:1.05;text-transform:uppercase}
+.card .desc{font-size:12.5px;color:var(--ink-soft);line-height:1.4;margin-top:4px;flex:1}
+.card .dur{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--amber);font-weight:600;margin-top:6px}
+.card .bot{display:flex;align-items:center;justify-content:space-between;margin-top:9px;gap:8px}
+.price{font-family:'Oswald';font-size:22px;font-weight:700;color:var(--ink)}
+.price small{font-family:'Inter';font-weight:500;font-size:11px;color:var(--ink-soft)}
+.add{background:var(--red);color:#fff;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;flex:none;white-space:nowrap;transition:.15s}
+.add:hover{background:var(--red-deep)}.add:active{transform:scale(.95)}
+.qtc{display:inline-flex;align-items:center;background:var(--red);border-radius:10px;overflow:hidden}
+.qtc button{color:#fff;font-size:18px;font-weight:700;width:32px;height:34px}
+.qtc span{color:#fff;font-weight:700;font-size:14px;min-width:22px;text-align:center}
+.simple .card .thumb{display:none}
+
+/* FAB */
+.fab{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;width:min(92%,540px);
+  background:var(--red);color:#fff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 12px 34px rgba(155,45,32,.5);transition:.2s;font-weight:700}
+.fab:active{transform:translateX(-50%) scale(.98)}
+.fab.hide{transform:translateX(-50%) translateY(140%)}
+.fab .c-count{background:#fff;color:var(--red);border-radius:8px;padding:3px 9px;font-size:13px;margin-right:10px}
+.fab .c-total{font-family:'Oswald';font-size:20px}
+
+/* OVERLAY + SHEET */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.66);z-index:70;opacity:0;pointer-events:none;transition:.2s}
+.overlay.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-radius:20px 20px 0 0;max-height:93vh;
+  display:flex;flex-direction:column;transform:translateY(100%);transition:transform .28s cubic-bezier(.3,.8,.3,1);border-top:1px solid var(--line)}
+.sheet.on{transform:translateY(0)}
+@media(min-width:620px){.sheet{left:50%;right:auto;transform:translate(-50%,100%);width:520px;border-radius:20px 20px 0 0}.sheet.on{transform:translate(-50%,0)}}
+.sh-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 12px;border-bottom:1px solid var(--line)}
+.sh-head h2{font-size:22px;color:var(--amber);text-transform:uppercase}
+.sh-close{font-size:26px;color:var(--ink-soft);width:34px;height:34px}
+.sh-body{overflow-y:auto;padding:6px 18px 10px}
+.sh-foot{padding:14px 18px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--card)}
+
+/* MODAL SERVIÇO */
+.pz-img{width:100%;height:180px;object-fit:cover;border-radius:14px;margin:8px 0 4px}
+.pz-desc{font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:4px}
+.pz-tags{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 2px}
+.pz-tag{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:600;color:var(--amber)}
+.opt-group{margin-top:16px}
+.opt-group>label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px;color:var(--ink-soft)}
+.obs-in{width:100%;margin-top:6px;font-size:13px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--card2);color:var(--ink)}
+.obs-in:focus,input:focus,select:focus{outline:none;border-color:var(--amber)}
+.qty-big{display:flex;align-items:center;gap:14px;justify-content:center;margin:6px 0}
+.qty-big button{width:42px;height:42px;border-radius:12px;background:var(--card2);border:1.5px solid var(--line);font-size:22px;font-weight:700;color:var(--amber)}
+.qty-big span{font-family:'Oswald';font-size:24px;font-weight:700;min-width:30px;text-align:center}
+.pz-add{width:100%;background:var(--red);color:#fff;font-weight:700;font-size:16px;padding:15px;border-radius:13px;display:flex;justify-content:space-between;align-items:center}
+.pz-add:active{transform:scale(.99)}
+
+/* CART / AGENDAMENTO */
+.citem{display:flex;gap:11px;padding:13px 0;border-bottom:1px solid var(--line)}
+.citem img,.citem .ni{width:54px;height:54px;border-radius:10px;object-fit:cover;flex:none;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:22px}
+.citem .ci-t{flex:1;min-width:0}
+.citem .ci-t h4{font-family:'Oswald';font-size:16px;font-weight:600;text-transform:uppercase}
+.citem .ci-t .cfg{font-size:12px;color:var(--ink-soft);margin-top:2px;line-height:1.35}
+.citem .ci-r{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:6px}
+.citem .lp{font-family:'Oswald';font-weight:700;font-size:16px;color:var(--ink)}
+.suggest{background:#1C1B14;border:1px dashed var(--amber);border-radius:12px;padding:11px 13px;margin:12px 0 2px;font-size:13px}
+.suggest b{color:var(--amber)}
+.sug-row{display:flex;gap:8px;margin-top:9px;overflow-x:auto;scrollbar-width:none}
+.sug-row::-webkit-scrollbar{display:none}
+.sug-chip{white-space:nowrap;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.sug-chip b{color:var(--amber)}
+.sug-chip:active{transform:scale(.96)}
+.nudge{background:#1C1B14;border:1px solid #4A3E1C;border-radius:12px;padding:10px 13px;margin:0 0 12px;font-size:12.5px;color:var(--ink-soft)}
+.nudge b{color:var(--amber)}
+
+.empty{text-align:center;color:var(--ink-soft);padding:46px 20px;font-size:14px}
+.empty .em{font-size:42px;margin-bottom:8px}
+
+.field{margin-top:14px}
+.field>label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:7px;color:var(--ink-soft)}
+
+/* DATA */
+.date-row{display:flex;gap:9px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.date-row::-webkit-scrollbar{display:none}
+.date-c{flex:none;width:66px;border:1.5px solid var(--line);border-radius:12px;padding:9px 4px;background:var(--card2);text-align:center;line-height:1.15;transition:.15s}
+.date-c .dw{font-size:11px;color:var(--ink-soft);font-weight:600;text-transform:uppercase}
+.date-c .dd{font-family:'Oswald';font-size:22px;font-weight:700;color:var(--ink)}
+.date-c .dm{font-size:10.5px;color:var(--ink-soft)}
+.date-c.sel{border-color:var(--amber);background:#3A2F12}
+.date-c.sel .dw,.date-c.sel .dm{color:var(--amber)}
+
+/* HORÁRIO */
+.slot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot{border:1.5px solid var(--line);border-radius:10px;padding:10px 4px;font-size:14px;font-weight:600;background:var(--card2);color:var(--ink);text-align:center;font-family:'Oswald'}
+.slot.sel{border-color:var(--amber);background:#3A2F12;color:var(--amber)}
+.slot:disabled{opacity:.32;cursor:not-allowed;text-decoration:line-through}
+.pick-hint{font-size:12px;color:var(--ink-soft);font-style:italic;padding:6px 0}
+
+/* PROF / PAG */
+.opts2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.o2{border:1.5px solid var(--line);border-radius:11px;padding:11px 12px;font-size:13px;font-weight:600;background:var(--card2);color:var(--ink);
+  display:flex;flex-direction:column;gap:2px;text-align:left;line-height:1.2}
+.o2 small{font-weight:500;color:var(--ink-soft);font-size:11px}
+.o2.sel{border-color:var(--amber);background:#3A2F12}
+.o2.center{align-items:center;text-align:center}
+.prof-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+input.txt{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 13px;font-size:14px;background:var(--card2);color:var(--ink)}
+input.txt::placeholder{color:#77746A}
+.pay3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.coupon{display:flex;gap:8px;margin-top:8px}
+.coupon input{flex:1}
+.coupon button{background:var(--amber);color:#1A1405;border-radius:10px;padding:0 16px;font-weight:700;font-size:13px}
+.coupon.ok input{border-color:var(--green);background:#1a2a1c}
+.sumrow{display:flex;justify-content:space-between;font-size:13.5px;margin:5px 0;color:var(--ink-soft)}
+.sumrow.disc{color:#7bd88f;font-weight:600}
+.totrow{display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+.totrow .tv{font-family:'Oswald';font-size:28px;font-weight:700;color:var(--ink)}
+.send{width:100%;background:var(--green);color:#053018;font-weight:700;font-size:16px;padding:15px;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:9px}
+.send:active{transform:scale(.99)}.send:disabled{background:#4a463d;color:#9a927f}
+.send svg{width:20px;height:20px;fill:#053018}
+.hint{font-size:11.5px;color:var(--ink-soft);margin-top:8px;line-height:1.45}
+
+.sobre{max-width:840px;margin:22px auto 0;padding:24px 20px 4px}
+.sobre h2{font-size:24px;color:var(--amber);margin-bottom:10px;text-transform:uppercase}
+.sobre p{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:10px}
+.sobre b{color:var(--ink);font-weight:600}
+footer{background:#09090A;color:var(--ink-soft);text-align:center;padding:24px 18px 34px;font-size:12.5px;line-height:1.7;margin-top:14px;border-top:1px solid var(--line)}
+footer b{color:var(--ink)}
+footer .fb{font-family:'Oswald';font-size:22px;color:var(--amber);margin-bottom:6px;text-transform:uppercase}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);z-index:90;background:#09090A;color:#fff;border:1px solid var(--line);
+  padding:11px 18px;border-radius:12px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 24px rgba(0,0,0,.5);max-width:90%}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* PWA install */
+.pwa{position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:55;width:min(92%,540px);display:none;
+  background:#09090A;color:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;align-items:center;gap:10px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.pwa b{font-weight:700;color:var(--amber)}
+.pwa .in{flex:1}
+.pwa button{background:var(--amber);color:#1A1405;font-weight:700;border-radius:9px;padding:8px 12px;font-size:13px}
+.pwa .x{background:none;color:#8A877B;padding:4px 8px;font-size:18px}
+
+/* fix: formulario longo (endereco/data) deixava o botao de enviar fora da tela */
+.sh-body{flex:0 1 auto;min-height:0;overflow-y:auto;max-height:34vh}
+.sh-foot{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sh-foot .send{position:sticky;bottom:0;z-index:3;box-shadow:0 -10px 20px rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg"><img src="img/hero.webp" alt="Fachada da Barbearia ArmLock"></div>
+  <div class="hero-in">
+    <div class="brand">
+      <img class="logo" src="apple-touch-icon.png" alt="ArmLock">
+      <div>
+        <h1>Arm<b>Lock</b></h1>
+        <div class="tg">Dê um ArmLock no seu visual</div>
+      </div>
+    </div>
+    <div class="meta" id="meta"></div>
+    <button class="repeat" id="repeatBtn" onclick="repeatLast()"></button>
+  </div>
+</header>
+<div class="closed-banner" id="closedBanner"></div>
+
+<nav class="nav"><div class="nav-in" id="nav"></div></nav>
+<main id="menu"></main>
+
+<section class="sobre">
+  <h2>Sobre a ArmLock</h2>
+  <p>A <b>Barbearia ArmLock</b> fica na Vila Nova Bonsucesso, em Guarulhos, e é feita pra quem curte visual alinhado: <b>fades</b>, corte social, corte kids e barba bem desenhada, com atendimento de segunda a sábado.</p>
+  <p>Escolha os <b>serviços</b>, marque a <b>data</b> e o <b>horário</b> e confirme tudo pelo WhatsApp. Sem fila, sem enrolação: você chega na hora certa e senta na cadeira. O pagamento é combinado no local — dinheiro, PIX ou cartão.</p>
+</section>
+
+<footer>
+  <div class="fb">Barbearia ArmLock</div>
+  <span id="footAddr"></span><br>
+  <b>Segunda a Sábado · 9h às 19h</b> · Pagamento no local (dinheiro, PIX ou cartão)<br>
+  <a href="tel:+5511919666620" style="color:inherit">📞 (11) 91966-6620</a>
+</footer>
+
+<button class="fab hide" id="fab" onclick="openCart()">
+  <span><span class="c-count" id="fabCount">0</span>Meu agendamento</span>
+  <span><span class="c-total" id="fabTotal">R$ 0,00</span> →</span>
+</button>
+
+<div class="pwa" id="pwaBar">
+  <div class="in"><b>Instale a ArmLock</b> no seu celular — agende seu corte em 1 toque.</div>
+  <button onclick="installPWA()">Instalar</button>
+  <button class="x" onclick="document.getElementById('pwaBar').style.display='none'">×</button>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+<div class="sheet" id="sheet">
+  <div class="sh-head"><h2 id="shTitle"></h2><button class="sh-close" onclick="closeAll()">×</button></div>
+  <div class="sh-body" id="shBody"></div>
+  <div class="sh-foot" id="shFoot"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HairSalon",
+  "name":"Barbearia ArmLock",
+  "image":"https://SEU-DOMINIO.com.br/og.jpg",
+  "url":"https://SEU-DOMINIO.com.br/",
+  "telephone":"+5511919666620",
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"Av. Bom Jesus da Lapa, 1877","addressLocality":"Guarulhos","addressRegion":"SP","postalCode":"07175-140","addressCountry":"BR"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}
+  ],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte"},"price":"45.00","priceCurrency":"BRL"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Barba"},"price":"35.00","priceCurrency":"BRL"},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte + Barba"},"price":"70.00","priceCurrency":"BRL"}
+  ]
+}
+</script>
+
+<script>
+/* ===================== CONFIG ===================== */
+const CONFIG = {
+  nome: "Barbearia ArmLock",
+  whatsapp: "5511919666620",               // (11) 91966-6620 — só dígitos, 55 + DDD
+  endereco: "Av. Bom Jesus da Lapa, 1877 — Vila Nova Bonsucesso, Guarulhos/SP · CEP 07175-140",
+  maps: "https://www.google.com/maps/search/?api=1&query=Av.+Bom+Jesus+da+Lapa,+1877,+Vila+Nova+Bonsucesso,+Guarulhos+-+SP,+07175-140",
+  horario: { dias:[1,2,3,4,5,6], abre:"09:00", fecha:"19:00", slot:30 }, // Seg–Sáb 9h–19h, slots de 30min
+  profissionais: ["Sem preferência"],      // para escolher barbeiro, adicione os nomes aqui: ["Sem preferência","Nome 1","Nome 2"]
+  cupons: { "PRIMEIRA10": {tipo:"percent", valor:10, label:"10% na 1ª visita"} },
+  diasFrente: 14,
+};
+
+/* ===================== SERVIÇOS ===================== */
+const MENU = [
+ {cat:"Cortes", key:"cortes", sub:"fade, social e kids", card:true, items:[
+   {id:"corte-fade", n:"Corte Fade", d:"degradê na máquina ou na navalha, com acabamento e finalização", p:45, dur:40, img:"corte-fade"},
+   {id:"corte-social", n:"Corte Social", d:"corte clássico na tesoura ou máquina, lavagem e finalização com pomada", p:40, dur:40, img:"corte-social"},
+   {id:"corte-infantil", n:"Corte Kids", d:"corte tranquilo pra criançada, até 10 anos", p:45, dur:30, img:"corte-infantil"},
+ ]},
+ {cat:"Barba", key:"barba", sub:"toalha quente e navalha", card:true, items:[
+   {id:"barba", n:"Barba", d:"toalha quente, óleo, navalha e finalização", p:35, dur:30, img:"barba"},
+ ]},
+ {cat:"Combos", key:"combos", sub:"o pacote completo, mais em conta", card:true, items:[
+   {id:"corte-barba", n:"Corte + Barba", d:"o combo da casa: corte completo e barba na navalha", p:70, dur:70, img:"combo"},
+ ]},
+ {cat:"Tratamentos", key:"tratamentos", sub:"cuidado extra pro cabelo", card:true, items:[
+   {id:"platinado", n:"Platinado / Descoloração", d:"descoloração e tonalização (consulta prévia recomendada)", p:120, dur:120, img:"platinado"},
+   {id:"hidratacao", n:"Hidratação / Relaxamento", d:"hidratação profunda ou relaxamento capilar", p:40, dur:30, img:"hidratacao"},
+ ]},
+ {cat:"Extras", key:"extras", sub:"acabamentos rápidos", card:false, items:[
+   {id:"pezinho", n:"Pezinho / Acabamento", d:"acabamento da nuca e contornos", p:15, dur:15},
+   {id:"sobrancelha", n:"Sobrancelha", d:"limpeza e alinhamento na navalha", p:15, dur:15},
+ ]},
+];
+const EMOJI = {extras:"✂️", cortes:"✂️", barba:"🪒", combos:"💈", tratamentos:"💧"};
+
+const ALL={}; MENU.forEach(c=>c.items.forEach(i=>{i.cat=c.cat;i.catKey=c.key;i.card=c.card;ALL[i.id]=i}));
+const brl=v=>"R$ "+v.toFixed(2).replace(".",",");
+function durLabel(m){ if(m<60)return m+"min"; const h=Math.floor(m/60),r=m%60; return r?`${h}h${r}`:`${h}h`; }
+
+/* ===================== ESTADO ===================== */
+let cart=[]; // linhas: {lineId, id, nome, preco, dur, qty, obs}
+let order={data:"", hora:"", prof:"Sem preferência", nome:"", tel:"", pag:"", cupom:"", obs:""};
+let modal={item:null, qty:1, obs:""};
+
+/* ===================== HORÁRIO / STATUS ===================== */
+function statusLoja(){
+  const now=new Date(); const dia=now.getDay();
+  const [ah,am]=CONFIG.horario.abre.split(":").map(Number);
+  const [fh,fm]=CONFIG.horario.fecha.split(":").map(Number);
+  const min=now.getHours()*60+now.getMinutes();
+  const aberto=CONFIG.horario.dias.includes(dia) && min>=ah*60+am && min<fh*60+fm;
+  let proximo="";
+  if(!aberto){
+    for(let i=0;i<7;i++){ const d=(dia+i)%7;
+      if(CONFIG.horario.dias.includes(d)){
+        if(i===0 && min<ah*60+am){ proximo="hoje às "+CONFIG.horario.abre; break; }
+        if(i===0) continue;
+        proximo=(i===1?"amanhã":["dom","seg","ter","qua","qui","sex","sáb"][d])+" às "+CONFIG.horario.abre; break;
+      }
+    }
+  }
+  return {aberto, proximo};
+}
+
+/* ===================== DATAS / SLOTS ===================== */
+const DIAS_SEM=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+const MES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+function proximasDatas(){
+  const out=[]; const d=new Date(); d.setHours(0,0,0,0);
+  for(let i=0;i<60 && out.length<CONFIG.diasFrente;i++){
+    if(CONFIG.horario.dias.includes(d.getDay())){
+      const iso=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+      out.push({iso, dw:DIAS_SEM[d.getDay()], dd:d.getDate(), dm:MES[d.getMonth()], hoje:i===0});
+    }
+    d.setDate(d.getDate()+1);
+  }
+  return out;
+}
+function dataLabel(iso){
+  const [y,m,dd]=iso.split("-").map(Number); const dt=new Date(y,m-1,dd);
+  return `${DIAS_SEM[dt.getDay()]} ${String(dd).padStart(2,"0")}/${String(m).padStart(2,"0")}`;
+}
+function slotsDoDia(iso){
+  const [ah,am]=CONFIG.horario.abre.split(":").map(Number);
+  const [fh,fm]=CONFIG.horario.fecha.split(":").map(Number);
+  const ini=ah*60+am, fim=fh*60+fm, step=CONFIG.horario.slot;
+  const now=new Date();
+  const hojeIso=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const out=[];
+  for(let m=ini;m<=fim-step;m+=step){
+    const passou = (iso===hojeIso) && (m <= nowMin+15); // 15min de folga
+    out.push({t:String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0"), off:passou});
+  }
+  return out;
+}
+
+/* ===================== RENDER TOPO ===================== */
+function renderMeta(){
+  const s=statusLoja();
+  document.getElementById("meta").innerHTML=`
+    <span class="chip ${s.aberto?'status-open':'status-closed'}"><span class="dot ${s.aberto?'on':'off'}"></span>${s.aberto?'Aberto agora':'Fechado'}</span>
+    <span class="chip"><a href="${CONFIG.maps}" target="_blank" rel="noopener">📍 Como chegar</a></span>
+    <span class="chip">🕐 Seg a Sáb · 9h–19h</span>`;
+  document.getElementById("footAddr").textContent="📍 "+CONFIG.endereco;
+  const cb=document.getElementById("closedBanner");
+  if(!s.aberto){ cb.style.display="block"; cb.textContent="🕐 Estamos fechados agora"+(s.proximo?" (abrimos "+s.proximo+")":"")+". Você já pode deixar seu horário agendado."; }
+  else cb.style.display="none";
+}
+
+function render(){
+  const nav=document.getElementById("nav"), menu=document.getElementById("menu");
+  nav.innerHTML=""; menu.innerHTML="";
+  MENU.forEach((c,i)=>{
+    const cid="cat-"+c.key;
+    const a=document.createElement("a"); a.href="#"+cid; a.textContent=c.cat; a.dataset.cid=cid;
+    if(i===0)a.classList.add("active"); nav.appendChild(a);
+    const sec=document.createElement("section"); sec.className="sec"+(c.card?"":" simple"); sec.id=cid;
+    sec.innerHTML=`<div class="sec-h"><h2>${c.cat}</h2>${c.sub?`<span class="sub">${c.sub}</span>`:""}</div>`;
+    const g=document.createElement("div"); g.className="grid";
+    c.items.forEach(it=>g.appendChild(cardEl(it)));
+    sec.appendChild(g); menu.appendChild(sec);
+  });
+  syncCards();
+}
+function cardEl(it){
+  const el=document.createElement("div"); el.className="card"; el.id="card-"+it.id;
+  const thumb=it.img?`<img class="thumb" loading="lazy" src="img/${it.img}.webp" alt="${it.n}">`:"";
+  el.innerHTML=`${thumb}<div class="txt"><h3>${it.n}</h3><div class="desc">${it.d||""}</div>
+    <div class="dur">🕐 ${durLabel(it.dur)}</div>
+    <div class="bot"><span class="price">${brl(it.p)}</span><span id="act-${it.id}"></span></div></div>`;
+  return el;
+}
+function actEl(it){
+  if(it.card) return `<button class="add" onclick="openServ('${it.id}')">Agendar</button>`;
+  const q=qtyOf(it.id);
+  if(q===0) return `<button class="add" onclick="addServ('${it.id}')">Adicionar</button>`;
+  return `<span class="qtc"><button onclick="decServ('${it.id}')">−</button><span>${q}</span><button onclick="addServ('${it.id}')">+</button></span>`;
+}
+function syncCards(){ MENU.forEach(c=>c.items.forEach(it=>{const s=document.getElementById("act-"+it.id); if(s)s.innerHTML=actEl(it);})); }
+
+/* ===================== ADD / REMOVE SERVIÇO ===================== */
+function qtyOf(id){ return cart.filter(l=>l.id===id).reduce((s,l)=>s+l.qty,0); }
+function addServ(id, silent){
+  const it=ALL[id]; const line=cart.find(l=>l.id===id && !l.obs);
+  if(line) line.qty++;
+  else cart.push({lineId:"L"+Date.now()+Math.round(Math.random()*999),id,nome:it.n,preco:it.p,dur:it.dur,qty:1,obs:""});
+  onCartChange(); if(!silent) toast(it.n+" adicionado");
+}
+function decServ(id){ const line=[...cart].reverse().find(l=>l.id===id); if(!line)return; line.qty--; if(line.qty<=0)cart=cart.filter(l=>l!==line); onCartChange(); }
+
+/* ===================== MODAL SERVIÇO ===================== */
+function openServ(id){
+  const it=ALL[id]; modal={item:it, qty:1, obs:""};
+  document.getElementById("shTitle").textContent=it.n;
+  renderServ(); openSheet("serv");
+}
+function renderServ(){
+  const it=modal.item;
+  const body=document.getElementById("shBody");
+  body.innerHTML=`
+    ${it.img?`<img class="pz-img" src="img/${it.img}.webp" alt="${it.n}">`:""}
+    <div class="pz-tags"><span class="pz-tag">🕐 ${durLabel(it.dur)}</span><span class="pz-tag">${brl(it.p)}</span></div>
+    <div class="pz-desc">${it.d||""}</div>
+    <div class="opt-group"><label>Alguma observação pro barbeiro?</label>
+      <input class="obs-in" id="svObs" placeholder="ex: fade baixo, risquinho, barba curta, disfarçado…" value="${modal.obs}" oninput="modal.obs=this.value">
+    </div>
+    <div class="opt-group"><label>Quantas pessoas / vezes?</label>
+      <div class="qty-big"><button onclick="modal.qty=Math.max(1,modal.qty-1);renderServ()">−</button><span>${modal.qty}</span><button onclick="modal.qty++;renderServ()">+</button></div>
+    </div>
+    <div class="opt-group"><label>Adicione também</label>
+      <div class="sug-row">${adicioneChips(it.id)}</div>
+    </div>`;
+  renderServFoot();
+}
+function renderServFoot(){
+  document.getElementById("shFoot").innerHTML=`
+    <button class="pz-add" onclick="addFromModal()">
+      <span>Adicionar ao agendamento</span><span>${brl(modal.item.p*modal.qty)}</span></button>`;
+}
+function addFromModal(){
+  const it=modal.item;
+  if(modal.obs.trim()){
+    cart.push({lineId:"L"+Date.now()+Math.round(Math.random()*999),id:it.id,nome:it.n,preco:it.p,dur:it.dur,qty:modal.qty,obs:modal.obs.trim()});
+  } else {
+    const line=cart.find(l=>l.id===it.id && !l.obs);
+    if(line) line.qty+=modal.qty;
+    else cart.push({lineId:"L"+Date.now()+Math.round(Math.random()*999),id:it.id,nome:it.n,preco:it.p,dur:it.dur,qty:modal.qty,obs:""});
+  }
+  closeAll(); onCartChange(); toast(it.n+" adicionado ao agendamento");
+}
+// "adicione também" no modal — sugere serviços complementares
+function adicioneChips(excludeId){
+  const sug=["barba","pezinho","sobrancelha","hidratacao"].filter(x=>x!==excludeId).map(x=>ALL[x]).filter(Boolean).slice(0,3);
+  return sug.map(x=>`<button class="sug-chip" onclick="event.stopPropagation();addServ('${x.id}')">+ ${x.n} <b>${brl(x.p)}</b></button>`).join("");
+}
+
+/* ===================== TOTAIS ===================== */
+function count(){ return cart.reduce((s,l)=>s+l.qty,0); }
+function subtotal(){ return cart.reduce((s,l)=>s+l.preco*l.qty,0); }
+function duracaoTotal(){ return cart.reduce((s,l)=>s+l.dur*l.qty,0); }
+function descontoCupom(){ const c=CONFIG.cupons[order.cupom]; if(!c)return 0; return c.tipo==="percent"? subtotal()*c.valor/100 : c.valor; }
+function total(){ return Math.max(0, subtotal()-descontoCupom()); }
+
+function onCartChange(){
+  syncCards(); persistCart();
+  const n=count(); document.getElementById("fabCount").textContent=n;
+  document.getElementById("fabTotal").textContent=brl(total());
+  document.getElementById("fab").classList.toggle("hide",n===0);
+  if(document.getElementById("sheet").classList.contains("on") && sheetMode==="cart") renderCart();
+}
+
+/* ===================== SHEET CTRL ===================== */
+let sheetMode="";
+function openSheet(m){ sheetMode=m||"serv"; document.getElementById("overlay").classList.add("on"); document.getElementById("sheet").classList.add("on"); document.body.style.overflow="hidden"; }
+function closeAll(){ document.getElementById("overlay").classList.remove("on"); document.getElementById("sheet").classList.remove("on"); document.body.style.overflow=""; sheetMode=""; }
+
+/* ===================== AGENDAMENTO (CART) ===================== */
+function openCart(){ renderCart(); openSheet("cart"); }
+function renderCart(){
+  document.getElementById("shTitle").textContent="Meu agendamento";
+  const body=document.getElementById("shBody"), foot=document.getElementById("shFoot");
+  if(!cart.length){ body.innerHTML=`<div class="empty"><div class="em">💈</div>Nenhum serviço escolhido ainda.<br>Escolha seus serviços no catálogo.</div>`; foot.innerHTML=""; return; }
+  body.innerHTML = cart.map(l=>{
+    const it=ALL[l.id];
+    const img = it.img?`<img src="img/${it.img}.webp" alt="">`:`<div class="ni">${EMOJI[it.catKey]||"✂️"}</div>`;
+    return `<div class="citem">${img}
+      <div class="ci-t"><h4>${l.nome}</h4>
+        <div class="cfg">${durLabel(l.dur)}${l.obs?' · '+l.obs:''}</div></div>
+      <div class="ci-r"><span class="lp">${brl(l.preco*l.qty)}</span>
+        <span class="qtc"><button onclick="decLine('${l.lineId}')">−</button><span>${l.qty}</span><button onclick="incLine('${l.lineId}')">+</button></span></div></div>`;
+  }).join("") + suggestBlock();
+
+  const datas=proximasDatas();
+  const slots = order.data?slotsDoDia(order.data):[];
+  const s=statusLoja();
+  foot.innerHTML=`
+    <div class="nudge">💈 <b>Aproveite e agende também</b> a barba ou a sobrancelha — sai tudo na mesma cadeira, sem esperar de novo.</div>
+    <div class="field"><label>Escolha o dia</label>
+      <div class="date-row">
+        ${datas.map(d=>`<button class="date-c ${order.data===d.iso?'sel':''}" onclick="setData('${d.iso}')">
+          <div class="dw">${d.hoje?'Hoje':d.dw}</div><div class="dd">${String(d.dd).padStart(2,'0')}</div><div class="dm">${d.dm}</div></button>`).join("")}
+      </div>
+    </div>
+    <div class="field"><label>Escolha o horário${order.data?' · '+dataLabel(order.data):''}</label>
+      ${order.data?`<div class="slot-grid">${slots.map(sl=>`<button class="slot ${order.hora===sl.t?'sel':''}" ${sl.off?'disabled':''} onclick="setHora('${sl.t}')">${sl.t}</button>`).join("")}</div>`
+        :`<div class="pick-hint">Selecione um dia acima para ver os horários.</div>`}
+    </div>
+    ${CONFIG.profissionais.length>1?`<div class="field"><label>Profissional</label>
+      <div class="prof-row">
+        ${CONFIG.profissionais.map(p=>`<button class="o2 center ${order.prof===p?'sel':''}" onclick="setProf('${p}')">${p==='Sem preferência'?'😎 '+p:'💈 '+p}</button>`).join("")}
+      </div>
+    </div>`:""}
+    <div class="field"><label>Seu nome</label><input class="txt" id="fNome" placeholder="Como te chamam?" value="${order.nome}" oninput="order.nome=this.value;updateSend()"></div>
+    <div class="field"><label>Seu WhatsApp</label><input class="txt" id="fTel" inputmode="numeric" placeholder="(11) 90000-0000" value="${order.tel}" oninput="order.tel=this.value;updateSend()"></div>
+    <div class="field"><label>Pagamento (no local)</label>
+      <div class="pay3">
+        <button class="o2 center ${order.pag==='PIX'?'sel':''}" onclick="setPag('PIX')">💠 PIX</button>
+        <button class="o2 center ${order.pag==='Dinheiro'?'sel':''}" onclick="setPag('Dinheiro')">💵 Dinheiro</button>
+        <button class="o2 center ${order.pag==='Cartão'?'sel':''}" onclick="setPag('Cartão')">💳 Cartão</button>
+      </div>
+      <div class="hint">Combine o pagamento direto com o barbeiro no dia.</div>
+    </div>
+    <div class="field"><label>Cupom de desconto</label>
+      <div class="coupon ${descontoCupom()>0?'ok':''}"><input class="txt" id="fCupom" placeholder="Tem um cupom? (ex: PRIMEIRA10)" value="${order.cupom}"><button onclick="aplicarCupom()">Aplicar</button></div>
+    </div>
+    <div style="margin-top:16px">
+      <div class="sumrow"><span>Serviços (${count()})</span><span>${brl(subtotal())}</span></div>
+      <div class="sumrow"><span>Duração estimada</span><span>${durLabel(duracaoTotal())}</span></div>
+      ${descontoCupom()>0?`<div class="sumrow disc"><span>Cupom ${order.cupom}</span><span>- ${brl(descontoCupom())}</span></div>`:""}
+      <div class="totrow"><span style="font-weight:600">Total estimado</span><span class="tv">${brl(total())}</span></div>
+    </div>
+    <button class="send" id="sendBtn" onclick="enviar()">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+      Confirmar agendamento no WhatsApp</button>
+    <div class="hint">A confirmação final do horário é feita na conversa do WhatsApp.</div>`;
+  updateSend();
+}
+// sugestões que aumentam o ticket
+function suggestBlock(){
+  const faltantes=["barba","pezinho","sobrancelha"].map(x=>ALL[x]).filter(it=>it && !cart.some(l=>l.id===it.id));
+  if(!faltantes.length) return "";
+  return `<div class="suggest"><b>Complete seu visual</b>
+    <div class="sug-row">${faltantes.map(x=>`<button class="sug-chip" onclick="addServ('${x.id}')">+ ${x.n} <b>${brl(x.p)}</b></button>`).join("")}</div></div>`;
+}
+function incLine(id){ const l=cart.find(x=>x.lineId===id); if(l){l.qty++;onCartChange();} }
+function decLine(id){ const l=cart.find(x=>x.lineId===id); if(!l)return; l.qty--; if(l.qty<=0)cart=cart.filter(x=>x!==l); onCartChange(); }
+function setData(iso){ order.data=iso; order.hora=""; renderCart(); }
+function setHora(t){ order.hora=t; renderCart(); }
+function setProf(p){ order.prof=p; renderCart(); }
+function setPag(p){ order.pag=p; renderCart(); }
+function aplicarCupom(){
+  const code=(document.getElementById("fCupom").value||"").trim().toUpperCase();
+  order.cupom=code;
+  if(CONFIG.cupons[code]){ toast("Cupom aplicado: "+CONFIG.cupons[code].label); } else if(code){ toast("Cupom inválido"); order.cupom=""; }
+  renderCart();
+}
+function updateSend(){ const b=document.getElementById("sendBtn"); if(!b)return;
+  const ok = cart.length && order.data && order.hora && order.nome.trim() && order.tel.trim();
+  b.disabled=!ok; }
+
+/* ===================== ENVIO WHATSAPP ===================== */
+function enviar(){
+  if(!cart.length){toast("Escolha ao menos um serviço");return;}
+  if(!order.data){toast("Escolha o dia");return;}
+  if(!order.hora){toast("Escolha o horário");return;}
+  if(!order.nome.trim()){toast("Digite seu nome");return;}
+  if(!order.tel.trim()){toast("Digite seu WhatsApp");return;}
+  const L=[];
+  L.push(`*AGENDAMENTO — ${CONFIG.nome}*`); L.push("");
+  L.push(`*Cliente:* ${order.nome.trim()}`);
+  L.push(`*WhatsApp:* ${order.tel.trim()}`);
+  L.push(`*Data:* ${dataLabel(order.data)} às ${order.hora}`);
+  if(CONFIG.profissionais.length>1) L.push(`*Profissional:* ${order.prof}`);
+  L.push(""); L.push("*Serviços:*");
+  cart.forEach(l=>{
+    L.push(`• ${l.qty}x ${l.nome} — ${brl(l.preco*l.qty)} (${durLabel(l.dur)})`);
+    if(l.obs) L.push(`   _${l.obs}_`);
+  });
+  L.push("");
+  L.push(`*Duração estimada:* ${durLabel(duracaoTotal())}`);
+  if(descontoCupom()>0){ L.push(`*Subtotal:* ${brl(subtotal())}`); L.push(`*Cupom ${order.cupom}:* -${brl(descontoCupom())}`); }
+  L.push(`*Total estimado:* ${brl(total())}`);
+  L.push(`*Pagamento:* no local${order.pag?` (${order.pag})`:""}`);
+  L.push(""); L.push("_Confirmar no WhatsApp · agendamento feito pelo site_");
+  localStorage.setItem("al_last", JSON.stringify({cart, order:{...order}}));
+  localStorage.setItem("al_nome", order.nome.trim());
+  localStorage.setItem("al_tel", order.tel.trim());
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=`+encodeURIComponent(L.join("\n")),"_blank");
+}
+
+/* ===================== REPETIR / NOME ===================== */
+function persistCart(){ localStorage.setItem("al_cart", JSON.stringify(cart)); }
+function initRepeat(){
+  const nome=localStorage.getItem("al_nome"); if(nome){ order.nome=nome; order.tel=localStorage.getItem("al_tel")||""; }
+  const last=localStorage.getItem("al_last");
+  if(last){ try{ const d=JSON.parse(last); if(d.cart&&d.cart.length){
+    const btn=document.getElementById("repeatBtn"); btn.style.display="block";
+    const resumo=d.cart.map(l=>l.qty+"x "+l.nome).slice(0,2).join(", ");
+    btn.innerHTML=`🔁 Repetir último agendamento <b>· ${resumo}${d.cart.length>2?"…":""}</b>`;
+  }}catch(e){} }
+}
+function repeatLast(){
+  const last=localStorage.getItem("al_last"); if(!last)return;
+  try{ const d=JSON.parse(last); cart=d.cart.map(l=>({...l,lineId:"L"+Date.now()+Math.round(Math.random()*9999)}));
+    if(d.order){ order.nome=d.order.nome||order.nome; order.tel=d.order.tel||order.tel; order.prof=d.order.prof||"Sem preferência"; }
+    order.data=""; order.hora=""; // sempre reescolhe data/horário
+    onCartChange(); openCart(); toast("Serviços do último agendamento carregados — escolha a nova data");
+  }catch(e){}
+}
+
+/* ===================== DEEP LINK ?servico= ===================== */
+function initDeepLink(){
+  const p=new URLSearchParams(location.search).get("servico");
+  if(p && ALL[p]){ setTimeout(()=>{ ALL[p].card?openServ(p):addServ(p); },350); }
+}
+
+/* ===================== SCROLLSPY ===================== */
+function initSpy(){
+  const links=[...document.querySelectorAll(".nav a")];
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+    links.forEach(l=>l.classList.toggle("active",l.dataset.cid===e.target.id));
+    const al=links.find(l=>l.dataset.cid===e.target.id); if(al)al.scrollIntoView({inline:"center",block:"nearest"});
+  }})},{rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll(".sec").forEach(s=>io.observe(s));
+}
+
+/* ===================== PWA ===================== */
+let deferredPrompt=null;
+const ehMobile = window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(pointer: coarse)").matches;
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredPrompt=e; if(ehMobile){ document.getElementById("pwaBar").style.display="flex"; } });
+function installPWA(){ if(!deferredPrompt)return; deferredPrompt.prompt(); deferredPrompt=null; document.getElementById("pwaBar").style.display="none"; }
+if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+
+/* ===================== toast ===================== */
+let tt; function toast(m){ const t=document.getElementById("toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1900); }
+
+renderMeta(); render(); initSpy(); initRepeat(); initDeepLink();
+setInterval(renderMeta,60000);
+</script>
+</body>
+</html>
